@@ -1,0 +1,65 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Out'
+Slack : -4.996
+TNS   : -43.835
+
+Type  : Slow 1200mV 85C Model Hold 'Out'
+Slack : 2.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Out'
+Slack : -3.000
+TNS   : -18.433
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'InA'
+Slack : -3.000
+TNS   : -14.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'InB'
+Slack : -3.000
+TNS   : -14.224
+
+Type  : Slow 1200mV 0C Model Setup 'Out'
+Slack : -4.495
+TNS   : -39.757
+
+Type  : Slow 1200mV 0C Model Hold 'Out'
+Slack : 2.168
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Out'
+Slack : -3.000
+TNS   : -18.433
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'InA'
+Slack : -3.000
+TNS   : -14.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'InB'
+Slack : -3.000
+TNS   : -14.224
+
+Type  : Fast 1200mV 0C Model Setup 'Out'
+Slack : -1.585
+TNS   : -13.095
+
+Type  : Fast 1200mV 0C Model Hold 'Out'
+Slack : 0.999
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Out'
+Slack : -3.000
+TNS   : -15.011
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'InB'
+Slack : -3.000
+TNS   : -13.112
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'InA'
+Slack : -3.000
+TNS   : -13.072
+
+------------------------------------------------------------
