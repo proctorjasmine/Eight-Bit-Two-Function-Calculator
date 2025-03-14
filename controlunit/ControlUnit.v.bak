@@ -1,0 +1,39 @@
+module ControlUnit (
+	input trig,
+	input [3:0]value,
+	input clk,
+	input clear_e, 
+	input clr,
+	output reset,
+	output loadA,
+	output loadB,
+	output AddSub,
+	output loadR,
+	output iuau,
+	output reg[3:0]state, nextstate
+	
+);
+
+assign state = 0;
+always@(posedge trig negedge clr)
+	if(clr == 0)
+	state <= 0;
+	else 
+	state <=nextstate;
+	
+always @(state, value)
+
+	case(state)
+		0: begin nextstate <= 1; reset = 0; loadA = 1; loadB = 1; loadR =1; iuau = 0; end
+		1: if(value[3:0] == 4'b1010 || value[3:0] == 4'b1011) 
+				begin nextstate <= 2; reset = 1; loadA = 0; loadB = 1; loadR =1; iuau = 0; end 
+				else begin nextstate <= 3; reset = 1; loadA = 1; loadB = 0; loadR =1; end
+		2: begin nextstate <= 3; reset = 1; loadA = 1; loadB = 1; loadR = 1; iuau = 0; end
+		3: if(value[3:0] == 4'b111) 
+				begin nextstate <=4; reset = 1; loadA = 1; loadB = 0; loadR =1; iuau = 0;end 
+				else begin nextstate <= 3; reset = 1; loadA = 1; loadB = 0; loadR =1; end
+		4: begin reset = 1; loadA = 1; loadB = 1; loadR =0; iuau = 1; end
+		default: begin nextstate <= 0;  reset = 0; loadA = 1; loadB = 1; loadR =0;end
+	endcase
+endmodule 
+		
