@@ -1,0 +1,37 @@
+// (TOP LEVEL)
+// Arithmetic Unit Top Level
+
+//////////////////////////////////////////////////////
+//
+// MODIFY THIS FILE
+// Goal 1: Instantiate the proper modules as listed below
+// Goal 2: Once instantiated, connect the inputs, wires, and outputs
+// Goal 3: Compile, then add pin assignments
+//
+//////////////////////////////////////////////////////
+
+module ArithmeticUnit 
+(
+	input [7:0] X,											// (DO NOT MODIFY LINE)
+	input InA, InB, Out, Clear, Add_Subtract,		// (DO NOT MODIFY LINE)
+	output [7:0] Result,									// (DO NOT MODIFY LINE)
+	output [3:0] Flags,									// (DO NOT MODIFY LINE)
+	output [0:6] HEX2, HEX1, HEX0						// (DO NOT MODIFY LINE)
+);
+
+wire [7:0] Aout, Bout, Rout;							// (DO NOT MODIFY LINE)
+wire [3:0] Fout;											// (DO NOT MODIFY LINE)
+
+// * Instantiate 8-bit NBitRegister (RegisterA) using X *
+// * Instantiate 8-bit NBitRegister (RegisterB) using X *
+
+// * Instantiate 8-bit RippleCarryAdderStructural (RCA) *
+
+// * Instantiate 4-bit NBitRegister (RegisterCC) using Flags *
+// * Instantiate 8-bit NBitRegister (RegisterR) using Result *
+
+// * Instantiate 4-bit to 1-hex bin2sev using Rout[3:0] *
+// * Instantiate 4-bit to 1-hex bin2sev using Rout[7:4] *
+// * Instantiate 4-bit to 1-hex bin2sev using Fout *
+
+endmodule
